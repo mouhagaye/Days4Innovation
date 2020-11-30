@@ -1,0 +1,836 @@
+@font-face {
+  // fonts
+  font-family: "HelveticaNeue55";
+  src: url("fonts/HelvNeue55_W1G.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeue35";
+  src: url("fonts/HelvNeue35_W1G.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeue75";
+  src: url("fonts/HelvNeue75_W1G.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeue65";
+  src: url("fonts/HelvNeue65_W1G.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeue45";
+  src: url("fonts/HelvNeue45_W1G.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeue45";
+  src: url("fonts/HelvNeue45_W1G.ttf");
+}
+@font-face {
+  font-family: "HelveticaNormal";
+  src: url("fonts/Helvetica-Normal.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCond";
+  src: url("fonts/HelveticaNeue-MediumCond.otf");
+}
+
+//colors
+
+$primary-colors: #fff;
+$primary-colors-hover: #707070;
+$secondary-color: #008b82;
+$background-color: #000;
+
+//fonts
+$condensed-font: "HelveticaNeueCond";
+$normal-font: "HelveticaNormal";
+$helv45-font: "HelveticaNeue45";
+$helv55-font: "HelveticaNeue55";
+$helv35-font: "HelveticaNeue35";
+$helv75-font: "HelveticaNeue75";
+$helv65-font: "HelveticaNeue65";
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $background-color;
+  color: $primary-colors;
+  font-size: 1vw;
+}
+
+h1 {
+  font-size: 5rem;
+}
+a {
+  text-decoration: none;
+  color: $primary-colors;
+}
+.hero {
+  overflow: hidden;
+  width: auto;
+  height: 100vh;
+}
+.landing-logo {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  img {
+    padding-top: 10px;
+    height: 30vh;
+  }
+  h4 {
+    font-weight: 100;
+  }
+
+  z-index: 10000;
+}
+
+.hero-macbook {
+  padding: 20px;
+  background-image: url(../images/mackbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  .mac-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 4vw;
+    font-size: 5vw;
+    h1 {
+      z-index: 2;
+    }
+    h3 {
+      z-index: 3;
+    }
+  }
+  .mac-bg {
+    position: relative;
+    top: 5vw;
+    background-image: url(../images/mactop.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero-mac-top {
+    position: absolute;
+    top: -20.5vw;
+    background-image: url(../images/groupLBTop.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 43.3vw;
+    height: 50vh;
+    left: 29.3vw;
+    z-index: 3;
+  }
+
+  h3 {
+    font-weight: 100;
+    font-size: 3vw;
+  }
+  h1 {
+    font-size: 5vw;
+    align-content: center;
+    margin: 0;
+  }
+}
+.landing-hero {
+  position: relative;
+  width: auto;
+  height: 95vh;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(../images/groupLB.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-top {
+  position: absolute;
+  top: 19.5vw;
+  left: -0.5%;
+  background-image: url(../images/groupLBTop.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.hero-landing-text {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  h1 {
+    font-size: 8vw;
+  }
+  h3 {
+    font-weight: 100;
+    font-size: 5vw;
+  }
+}
+
+.hero-landing-text-top {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  h1 {
+    color: transparent;
+    font-size: 8vw;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+  h3 {
+    font-weight: 100;
+    font-size: 5vw;
+  }
+}
+.hero-theme {
+  padding: 40px;
+  img {
+    height: auto;
+  }
+}
+.hero-theme {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "Paco-logo Paco-logo"
+    "Paco-text Paco-img";
+}
+.theme-img {
+  grid-area: Paco-img;
+}
+.landing-theme-logo {
+  grid-area: Paco-logo;
+  display: flex;
+  justify-content: center;
+}
+.theme-text {
+  grid-area: Paco-text;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-weight: 700;
+    font-size: 5vw;
+  }
+  h2 {
+    font-weight: 100;
+    font-size: 2vw;
+  }
+}
+.bottom-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 50px;
+}
+.wrapper {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    ". . participate"
+    "hero-img hero-img hero-text"
+    "D4I-content . big-button-participate"
+    "program-caroussel program-caroussel program-caroussel"
+    ". . D4I-logo"
+    ". agenda-center-1 ."
+    "agenda-left-1 agenda-center-1 ."
+    ". agenda-center-1 agenda-right-1"
+    "agenda-left-2 agenda-center-1 ."
+    ". agenda-center-2 ."
+    "agenda-left-3 agenda-center-2 ."
+    ". agenda-center-2 agenda-right-2"
+    "agenda-left-4 agenda-center-2 ."
+    ". D4I-success-logo ."
+    "footer footer footer";
+  .return-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $primary-colors;
+    cursor: pointer;
+    text-align: center;
+    //border-radius: 4px;
+    :hover {
+      color: $primary-colors-hover;
+    }
+  }
+}
+
+header {
+  padding-left: 5%;
+  grid-area: header;
+  font-family: $condensed-font;
+  margin-bottom: 20px;
+}
+.amatic{
+  font-family: 'Amatic SC', cursive;
+}
+.slogan {
+  grid-area: header-slogan;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 10px;
+  font-family: $condensed-font;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+.menu {
+  border-bottom: #222222 1px solid;
+  font-family: $condensed-font;
+  font-size: small;
+}
+.button-participate {
+  text-decoration: none;
+  grid-area: menu-start / participate-start / participate-end / participate-end;
+  border: 1px solid $secondary-color;
+  padding: 40px 10px;
+  margin:5 px;
+  color: $primary-colors;
+  font-family: $helv35-font;
+  font-size: small;
+  justify-self: center;
+  text-transform: capitalize;
+  background-color: black;
+  z-index: 10000;
+  cursor: pointer;
+}
+.hero-img {
+  grid-area: hero-img;
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
+.hero-text {
+  grid-area: hero-text;
+  justify-self: left;
+  text-align: right;
+  font-family: $condensed-font;
+  font-size: xx-large;
+}
+.highlight-text {
+  color: $secondary-color;
+}
+.d4i-content {
+  padding-left: 5%;
+  grid-area: D4I-content;
+  font-family: $helv55-font;
+  font-size: 2.5rem;
+  justify-self: right;
+  align-self: start;
+  > p {
+    border-top: 10px solid $secondary-color;
+    padding-top: 5%;
+    margin-top: 15%;
+    text-align: right;
+  }
+}
+.big-button-participate {
+  grid-area: big-button-participate;
+  font-family: $condensed-font;
+  font-size: xx-large;
+  color: $secondary-color;
+  text-align: center;
+  border-left: $secondary-color solid 20px;
+  border-top: $secondary-color solid 20px;
+  border-bottom: $secondary-color solid 20px;
+  text-decoration: none;
+  padding: 25vh 20%;
+  margin-bottom: 10%;
+  cursor: pointer;
+}
+.caroussel-wrapper {
+  grid-area: program-caroussel;
+  display: inline-block;
+  height: 100vh;
+  padding-left: 15%;
+  padding-top: 15%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 139, 130, 1) 48%
+  );
+}
+.caroussel-item {
+  padding-right: 30px;
+  h5 {
+    font-family: $helv35-font;
+  }
+}
+.slide-arrow {
+  position: absolute;
+  top: 25%;
+}
+.prev-arrow {
+  font-family: Arial;
+  right: 10px;
+}
+.next-arrow {
+  left: 10px;
+}
+
+.D4I-logo {
+  position: relative;
+  left: -8rem;
+  grid-area: D4I-logo;
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+.day-title.day01 {
+  grid-area: agenda-center-1;
+}
+.day-title.day02 {
+  grid-area: agenda-center-2;
+}
+
+.day-title {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > h1 {
+    font-size: 4rem;
+    font-family: $condensed-font;
+    font-weight: bold;
+  }
+}
+.day-item.left01 {
+  grid-area: agenda-left-1;
+  text-align: right;
+  margin-top: 150px;
+  .item-starthour {
+    right: -90px;
+  }
+}
+.day-item.right01 {
+  grid-area: agenda-right-1;
+  text-align: left;
+  .item-starthour {
+    left: -90px;
+  }
+}
+.day-item.left02 {
+  grid-area: agenda-left-2;
+  text-align: right;
+  .item-starthour {
+    right: -90px;
+  }
+}
+.day-item.left03 {
+  grid-area: agenda-left-3;
+  text-align: right;
+  margin-top: 150px;
+  .item-starthour {
+    right: -90px;
+  }
+}
+.day-item.right02 {
+  grid-area: agenda-right-2;
+  text-align: left;
+  .item-starthour {
+    left: -90px;
+  }
+}
+.day-item.left04 {
+  grid-area: agenda-left-4;
+  text-align: right;
+  .item-starthour {
+    right: -90px;
+  }
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  .item-starthour {
+    position: relative;
+    bottom: -3.5rem;
+    .hour {
+      font-size: 5rem;
+      font-family: $condensed-font;
+      font-weight: bold;
+      padding-bottom: 0px;
+      line-height: 1.75rem;
+    }
+  }
+  .item-starthour > .minutes {
+    font-size: 5rem;
+    font-family: $condensed-font;
+    font-weight: bold;
+  }
+  .item-theme {
+    font-family: $condensed-font;
+    line-height: 2.75rem;
+    font-size: 3.5rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+/*tous les elements de l'agenda titre et heures ainsi que le présentateur*/
+.title {
+  font-family: $helv55-font;
+  font-size: 2.5rem;
+  font-weight: bold;
+  .item-hour {
+    font-family: $helv35-font;
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+}
+.presentateur {
+  color: $primary-colors-hover;
+  font-family: $helv35-font;
+  font-size: 0.75rem;
+  font-weight: light;
+}
+
+.theme-logo {
+  grid-area: D4I-success-logo;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  padding: 50px 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.footer {
+  border-top: #222222 1px solid;
+  height: 50vh;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .social-link {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    > div {
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+// grid end
+
+.slogan02 {
+  padding-right: 1.5rem;
+}
+.menu {
+  grid-area: menu;
+  display: flex;
+}
+.menu ul li {
+  display: inline;
+  padding-right: 10px;
+  > a {
+    text-decoration: none;
+    color: $primary-colors;
+  }
+}
+
+.menu ul li.active {
+  > a {
+    text-decoration: none;
+    color: $primary-colors-hover;
+  }
+}
+@media screen and (max-width: 1210px) {
+  .day-title {
+    > h1 {
+      font-size: 37px;
+    }
+  }
+}
+
+/* style form registration */
+
+.registration-form {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-image: url("../images/form-bg-duotone.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .form-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 5vw;
+  }
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+}
+.closing-button {
+  position: absolute;
+  z-index: 2;
+  color: $primary-colors;
+  font-size: 3rem;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.message-infos {
+  grid-template-areas: "left";
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.agenda-selection {
+  grid-template-areas: "right";
+}
+.form-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  h1 {
+    font-size: 2rem;
+    font-family: $condensed-font;
+    font-weight: bold;
+  }
+  margin-bottom: 10px;
+}
+.intext-logo {
+  display: inline;
+  width: 20vw;
+}
+input.button {
+  text-decoration: none;
+  border: 1px solid $secondary-color;
+  padding: 40px 10px;
+  color: $primary-colors;
+  font-family: $helv35-font;
+  font-size: 2rem;
+  justify-self: center;
+  text-transform: capitalize;
+  background-color: transparent;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+.form-content {
+  padding: 20px 20px;
+  width: 75vw;
+  height: auto;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(7px);
+  input,
+  label {
+    font-family: $helv45-font;
+  }
+  input[type="text"],
+  textarea {
+    border-bottom: 2px solid $primary-colors-hover;
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 1.6rem;
+    color: $primary-colors;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+    font-family: $helv45-font;
+  }
+  input[type="text"]:focus {
+    border-bottom: 2px solid $secondary-color;
+  }
+  /********************************************
+ * Checkbox 
+ *******************************************/
+
+  /********************************************
+ * end Checkbox 
+ *******************************************/
+  input[type="checkbox"] {
+    background-color: transparent;
+    height: 1.2rem;
+    width: 1.2rem;
+    border: 1px solid $secondary-color;
+  }
+
+  .form-title > h1,
+  h1 {
+    font-size: 1rem;
+  }
+
+  .agenda-item-type {
+    font-family: $helv35-font;
+    .item-theme {
+      font-family: $condensed-font;
+    }
+    .agenda-item-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .item-hour {
+      display: inline;
+    }
+    .presentateur {
+      display: inline;
+      color: white;
+    }
+  }
+}
+/* begin place holder white */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $primary-colors;
+  opacity: 0.6; /* Firefox */
+  font-family: $helv45-font;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $primary-colors;
+  font-family: $helv45-font;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $primary-colors;
+  font-family: $helv45-font;
+}
+
+/* end  splace holder white */
+
+.thx-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-family: $helv65-font;
+    font-size: 2rem;
+  }
+  .animated-log {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.presentateur {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 760px) {
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-link {
+    font-size: 5em;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .day-item {
+    padding-top: 50px;
+    border-top: #008b82 1px solid;
+    li {
+      padding: 10px 0;
+    }
+  }
+  .agenda > .day-item {
+    padding: 5px;
+  }
+  .item-starthour {
+    display: none;
+  }
+
+  .day-title > h1 {
+    position: relative;
+    left: 0rem;
+    font-size: 5em;
+    font-family: $condensed-font;
+    font-weight: bold;
+  }
+  .button-participate {
+    text-align: center;
+    font-size: x-large;
+  }
+  .D4I-logo {
+    position: relative;
+    left: 10px;
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+  .closing-button {
+    font-size: 5vw;
+  }
+}

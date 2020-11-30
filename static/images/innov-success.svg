@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="991" height="396" viewBox="0 0 991 396">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_445" data-name="Rectangle 445" width="991" height="396" transform="translate(493 8534)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="Tracé_16" x="-541.5" y="484.5" width="1958" height="22" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_de_masques_7" data-name="Groupe de masques 7" transform="translate(-493 -8534)" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 493, 8534)" filter="url(#Tracé_16)">
+      <path id="Tracé_16-2" data-name="Tracé 16" d="M1940,0H0" transform="translate(-532.5 492.5)" fill="rgba(0,0,0,0)" stroke="#222" stroke-width="4"/>
+    </g>
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="298" height="5112" transform="translate(811 3388)" fill="#00847c"/>
+    <g id="Groupe_37" data-name="Groupe 37">
+      <text id="_4_" data-name="
+4 
+" transform="translate(150 7953.5)" fill="none" stroke="rgba(12,101,96,0.94)" stroke-width="8" font-size="400" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700"><tspan x="790" y="384"></tspan><tspan x="694" y="867">4 </tspan></text>
+      <text id="_Innovate_" data-name=" Innovate 
+" transform="translate(359 8743.5)" fill="#fff8f8" font-size="120" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700"><tspan x="133.28" y="115" xml:space="preserve"> Innovate </tspan></text>
+      <text id="_success" data-name=" success" transform="translate(842 8566.5)" fill="#fff8f8" font-size="120" font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-weight="700"><tspan x="145.34" y="115" xml:space="preserve"> success</tspan></text>
+    </g>
+  </g>
+</svg>

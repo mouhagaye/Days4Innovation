@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN bou jquery  flick mooko sokhla-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--font awesome le CDN-->
+    <script src="https://use.fontawesome.com/2484eb5dc2.js"></script>
+    <!--<script src="https://use.fontawesome.com/90f8d320ce.js"></script>-->
+    <!--Bossoup flick js .. css ak javascript-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- sama feuille de style-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <!-- font roboto for hero text-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+
+    <title>Days For innovation - landing page</title>
+</head>
+
+<body>
+
+    <div class="landing-logo">
+        <div class="down-line">
+            <img src="static/images/line.svg" alt="">
+        </div>
+        <img src="static/images/innovation-days logo.svg" alt="">
+        <div class="down-line">
+            <img src="static/images/arrow.svg" alt="">
+        </div>
+        <h4>scroll down...</h4>
+    </div>
+    <div class="landing-hero">
+        <div class="hero-bg">
+        </div>
+        <div class="hero-landing-text rellax" data-rellax-speed="-3">
+            <h3>Nous vous donnons rendez vous...</h3>
+            <h1> LES 07 et 08 DÉCEMBRE</h1>
+        </div>
+        <div class="hero-landing-text-top rellax" data-rellax-speed="-3">
+            <h3>Nous vous donnons rendez vous...</h3>
+            <h1> LES 07 et 08 DÉCEMBRE</h1>
+        </div>
+        <div class="hero-top rellax" data-rellax-speed="2">
+        </div>
+    </div>
+    <div class="hero-theme">
+        <div class="landing-theme-logo">
+            <img src="static/images/innov-success.svg" alt="">
+        </div>
+        <div class="theme-text">
+            <h2>THEME:</h2>
+            <h1>Innovation et création de valeur</h1>
+        </div>
+
+        <img class="theme-img" src="static/images/iamLBR.png" alt="">
+    </div>
+    <div class="hero-macbook">
+        <div class="mac-text rellax" data-rellax-speed="-1" data-rellax-zindex="2">
+            <h1>Une première édition full online...</h1>
+            <h3>deux jours consacrées à l'innovation</h3>
+        </div>
+    </div>
+    <div class="hero-mac-top rellax" data-rellax-speed="-1" data-rellax-zindex="3">
+
+    </div>
+    <div class="hero-call-to-action">
+        <div class="bottom-button">
+            <a href="{{ url_for('presentationDays4innovation')}}" class="button-participate ">
+                <h2> inscrivez vous... </h2>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logo">
+            <img src="static/images/logoLb.svg">
+        </div>
+
+        <div class="social-link">
+
+            <div class="fb-link"><i class=" fa fa-facebook-square"></i></div>
+            <div class="twt-link"><i class=" fa fa-twitter-square"></i></div>
+            <div class="linked-link"><i class="fa fa-linkedin-square"></i></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax(".rellax");
+    </script>
+</body>
+
+</html>

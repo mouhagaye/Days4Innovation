@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN bou jquery  flick mooko sokhla-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--font awesome le CDN-->
+    <script src="https://use.fontawesome.com/2484eb5dc2.js"></script>
+    <!-- Google font amatic SC CDN-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!--<script src="https://use.fontawesome.com/90f8d320ce.js"></script>-->
+    <!--Bossoup flick js .. css ak javascript-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- sama feuille de style-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+
+    <title>Days For innovation - landing page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <button onclick="topFunction()" class="return-top-button" id="return-top-button" title="Go to top"><i
+                class="fa fa-sort-up"></i></button>
+        <header>
+            <div class="header-logo">
+                <img src="static/images/logoLb.svg">
+            </div>
+            <div class="slogan">
+                <div class="slogan01">Further </div>
+                <div class="slogan02">Together</div>
+            </div>
+
+        </header>
+        <div class="menu">
+            <ul>
+                <li class="active"> <a href="#">Accueil</a> </li>
+                <li><a href="#Speaker">Speaker</a> </li>
+                <li><a href="#Agenda">Agenda</a></li>
+                <li><a href="#Apropos">A propos</a></li>
+            </ul>
+        </div>
+        <a href="{{url_for('registration')}}" class="button-participate"> PARTICIPEZ...</a>
+
+        <div class="hero-img">
+            <img src="static/images/macLineBreakers.png" alt="macbook illustration">
+        </div>
+
+        <div class="hero-text">
+            <h1>Faire de <br> l'innovation,<br> l'affaire <div class="highlight-text"> de tous.</div>
+            </h1>
+        </div>
+        <div class="d4i-content">
+            <p>
+                D4I<span class="amatic">2020</span><br>
+                Les days for Innovation sont des moments d’échanges et d’inspiration pour la communauté des
+                LineBreakers.<br>
+                Venez vivre avec nous, comme jamais, l’innovation chez SONATEL.
+            </p>
+        </div>
+        <a href="{{url_for('registration')}}" class="big-button-participate">
+            Enregistrez vous <br> maintenant!
+        </a>
+
+        <div id="Speaker" class="caroussel-wrapper">
+            <div class="caroussel-item">
+                <img src="static/images/cisse-Google.png" alt="cisse google">
+                <h5>Moustapha CISSE - google Africa</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/nico.png" alt="nico AMEA">
+                <h5>Nicolas Bry - Boost Orange MEA Innovation</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/bigs.png" alt="Birahim sonatel">
+                <h5>El Hadji Birahim GUEYE -innovation Lab SONATEL</h5>
+            </div>
+        </div>
+        <div id="Agenda" class="D4I-logo">
+            <img src="static/images/innovation-days logo.svg" alt="">
+        </div>
+        <div class="day-title day01">
+            <h1>DAY 01</h1>
+        </div>
+
+        <div class="day-item left01">
+            <div class="item-starthour">
+                <div class="hour">11</div>
+                <div class="minutes">00</div>
+            </div>
+            <div class="item-theme">Panel d'ouverture</div>
+            <ul>
+                <li>
+
+                    <div class="title"><span class="item-hour">11:00-11:15 </span>Lancement des D4I<span
+                            class="amatic">2020</span> </div>
+                    <div class="presentateur">Sponsors: Mme WANE (DSI) et M. TRAORE (DRH)
+                        <br> Présidé par le DG M. Sékou DRAME
+                    </div>
+                </li>
+                <li>
+
+                    <div class="title"><span class="item-hour">11:15-12:00 </span> Oz,innovation stories</div>
+                    <div class="presentateur">Présenté par Khadidiatou NDIAYE
+                        <br>Présidé par le DG
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="day-item right01">
+            <div class="item-starthour">
+                <div class="hour">12</div>
+                <div class="minutes">00</div>
+            </div>
+            <div class="item-theme">Breakers Share</div>
+            <ul>
+                <li>
+                    <div class="title"> <span class="item-hour">12:00-13:00 </span>Orange Fab Stories
+                    </div>
+                    <div class="presentateur">Présenté par M. Cheikh T. DIOP
+                        <br>Présidé par DSD- M.Omar G. NDIAYE,Gora DER
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="day-item left02">
+            <div class="item-starthour">
+                <div class="hour">14</div>
+                <div class="minutes">30</div>
+            </div>
+            <div class="item-theme">Breakers talk </div>
+            <ul>
+                <li>
+                    <div class="title"> <span class="item-hour">14:30-15:30 </span>Intrapreneur factory</div>
+                    <div class="presentateur">Présenté  par le Nicolas Bry
+                        <br>Présidé par DRH- M. Ibrahima TRAORE
+                        </div>
+                </li>
+                <li>
+
+                    <div class="title"> <span class="item-hour">15:30-16:30 </span>Koori- Design Thinking</div>
+                    <div class="presentateur">Présenté par kalidou Sy,Papa Saliou MBODJI
+                        <br>Présidé par le DSI-  Mme Racky Sada WANE
+                       </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="day-title day02">
+            <h1>DAY 02</h1>
+        </div>
+        <div class="day-item left03">
+            <div class="item-starthour">
+                <div class="hour">09</div>
+                <div class="minutes">00</div>
+            </div>
+            <div class="item-theme">Innovation Panel</div>
+            <ul>
+                <li>
+                    <div class="title"><span class="item-hour">09:00-10:15 </span>Open innovation en Afrique </div>
+                    <div class="presentateur">Panélistes : Rokhaya S. NDIR, Mor DIOUM Atos, Cheikh.T. DIOP, Florent YOUZAN (SG ilab)
+                        <br>Présidé par  DCIRE, M. Karim MBENGUE</div>
+                </li>
+
+                <li>
+                    <div class="title"><span class="item-hour">11:00-12:00 </span>AI and Data innovation pour telcos
+                    </div>
+                    <div class="presentateur">Panélistes:  Moustapha DIOUF, Sandéné NDAO, Cheikh Ndongo, Papa Ngal DIAO
+                        Présidé par DSD, M. Omar G. NDIAYE
+                        </div>
+                </li>
+            </ul>
+        </div>
+        <div class="day-item right02">
+            <div class="item-starthour">
+                <div class="hour">10</div>
+                <div class="minutes">00</div>
+            </div>
+            <div class="item-theme">Breakers Class</div>
+            <ul>
+                <li>
+                    <div class="title"> <span class="item-hour">10:00-11:00 </span>Innovation et Formation
+                    </div>
+                    <div class="presentateur">Panélistes:  Pr. Mary teuw Niane                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="day-item left04">
+            <div class="item-starthour">
+                <div class="hour">14</div>
+                <div class="minutes">30</div>
+            </div>
+            <div class="item-theme"> Closing E-event </div>
+            <ul>
+                <li>
+
+                    <div class="title"><span class="item-hour"> 14:30-15:30 </span>Présentation des linebreakers
+                    </div>
+                    <div class="presentateur">Sire et Aissatou</div>
+                </li>
+                <li>
+
+                    <div class="title"><span class="item-hour"> 15:30-16:30 </span> Visite ODC
+                    </div>
+                    <div class="presentateur">Présentation : Daouda DIOUF, Yankhoba B. A. MANE
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="theme-logo" id="Apropos">
+            <img src="static/images/innov-success.svg" alt="">
+        </div>
+        
+        <div class="footer">
+            <a href="{{url_for('registration')}}" class="button-participate">
+                <h2> Let's Go... </h2>
+            </a>
+
+            <div class="logo">
+                <img src="static/images/logoLb.svg">
+            </div>
+
+            <div class="social-link">
+
+                <div class="fb-link"><i class=" fa fa-facebook-square"></i></div>
+                <div class="twt-link"><i class=" fa fa-twitter-square"></i></div>
+                <div class="linked-link"><i class="fa fa-linkedin-square"></i></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        $('.caroussel-wrapper').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true,
+            prevArrow: '<div class="slide-arrow prev-arrow"><i class="fa fa-arrow-right"></i></div>',
+            nextArrow: '<div class="slide-arrow next-arrow"><i class="fa fa-arrow-left"></i></div>'
+        });
+    </script>
+    <script type="text/javascript">
+        //Get the button
+        var mybutton = document.getElementById("return-top-button");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+
+</html>
