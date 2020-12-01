@@ -42,9 +42,8 @@ def registration():
     cur = mysql.connection.cursor()
     cur.execute("INSERT INTO participant(nom,mail,remarque,evenements) VALUES (%s, %s, %s,%s)",(name,mail,remarque,evenements))
     mysql.connection.commit()
-    cur.close
+    cur.close()
 
-    print(events)
 
     for event in events:
 
@@ -73,6 +72,7 @@ def registration():
                 appt.Recipients.Add(mail) # Don't end ; as delimiter
 
                 appt.Send()
+        
                 pythoncom.CoInitialize()
 
             except:
