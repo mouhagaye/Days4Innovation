@@ -1,7 +1,5 @@
-from flask import Flask ,render_template,request,redirect,url_for
-from flask_mysqldb import MySQL
-import pythoncom
-import win32com.client
+from flask import Flask ,render_template,request
+from flask_mysql_connector import MySQL
 
 
 
@@ -9,7 +7,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER']= 'root'
-app.config['MYSQL_PASSWORD'] = 'leavemealone'
+app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'Days4Innovation'
 
 mysql = MySQL(app) 
@@ -46,47 +44,10 @@ def registration():
         cur.close()
 
 
-    for event in events:
-
-        i = titre.index(event)
-        if i < 4 :
-            day = "2020-12-07"
-        else:
-            day = "2020-12-08"
-
-
-        start = day+debut[i]
-        duration = duree[i]
-
-        if mail is not None:
-            try:
-                pythoncom.CoInitialize()
-                outlook = win32com.client.Dispatch("Outlook.Application")
-                appt = outlook.CreateItem(1)
-                appt.Start = start # yyyy-MM-dd hh:mm
-                appt.Subject = event
-                appt.Duration = duration # In minutes (60 Minutes)
-                appt.Location = "Sonatel"
-                appt.MeetingStatus = 1 # 1 - olMeeting; Changing the appointment to meeting. Only after changing the meeting status recipients can be added
-
-                appt.Recipients.Add(mail) # Don't end ; as delimiter
-
-                appt.Send()
-        
-                pythoncom.CoInitialize()
-
-            except:
-                print('An error occured!')
-
-    if request.method == 'POST':
-        return redirect(url_for('thx'))
-
-
-
     return render_template("registration.html")
 
 
-@app.route("/thx", methods=['GET'])
+@app.route("/thx")
 def thx():
     return render_template("thx.html")
 
