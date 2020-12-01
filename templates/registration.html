@@ -123,7 +123,7 @@
                         </div>
                         <div class="message-infos">
                             <input type="text" name="names" placeholder="Nom et prénoms" autocomplete="off">
-                            <input type="text" id="mail" name="mail" placeholder="votre adresse mail" autocomplete="off" onfocus="validation()">
+                            <input type="text" id="mail" name="mail" placeholder="votre adresse mail" autocomplete="off" onchange="validation()">
                             <textarea name="message" id="" cols="30" rows="10" autocomplete="off"
                             placeholder="Laissez nous vos remarques... ;)"></textarea>
                         <input type="submit" id="button" value="Envoyer" class="button">
@@ -153,15 +153,13 @@
             }
             else{
                 toastr.success("Email valide !");
-
+                document.getElementById("button").disabled = false;
             }
-            toastr.options = {
-                "preventDuplicates": true,
-                "preventOpenDuplicates": true
-                };
+            
 
         }
     </script>
+ 
 </body>
 
 </html>
