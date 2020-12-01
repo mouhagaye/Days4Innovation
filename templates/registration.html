@@ -126,7 +126,7 @@
                             <input type="text" id="mail" name="mail" placeholder="votre adresse mail" autocomplete="off" onchange="validation()">
                             <textarea name="message" id="" cols="30" rows="10" autocomplete="off"
                             placeholder="Laissez nous vos remarques... ;)"></textarea>
-                        <input type="submit" id="button" value="Envoyer" class="button">
+                        <input onsubmit="{{url_for('thx')}}" type="submit" id="button" value="Envoyer" class="button">
                         
                         </div>
                        

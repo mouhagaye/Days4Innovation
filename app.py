@@ -1,4 +1,4 @@
-from flask import Flask ,render_template,request
+from flask import Flask ,render_template,request,redirect,url_for
 from flask_mysqldb import MySQL
 import pythoncom
 import win32com.client
@@ -58,7 +58,6 @@ def registration():
         start = day+debut[i]
         duration = duree[i]
 
-
         if mail is not None:
             try:
                 pythoncom.CoInitialize()
@@ -79,12 +78,15 @@ def registration():
             except:
                 print('An error occured!')
 
+    if request.method == 'POST':
+        return redirect(url_for('thx'))
+
 
 
     return render_template("registration.html")
 
 
-@app.route("/thx")
+@app.route("/thx", methods=['GET'])
 def thx():
     return render_template("thx.html")
 
