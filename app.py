@@ -1,4 +1,4 @@
-from flask import Flask ,render_template,request
+from flask import Flask ,render_template,request,redirect,url_for
 from flask_mysql_connector import MySQL
 
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER']= 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'leavemealone'
 app.config['MYSQL_DB'] = 'Days4Innovation'
 
 mysql = MySQL(app) 
@@ -42,6 +42,9 @@ def registration():
         cur.execute("INSERT INTO participant(nom,mail,remarque,evenements) VALUES (%s, %s, %s,%s)",(name,mail,remarque,evenements))
         mysql.connection.commit()
         cur.close()
+
+    if request.method == 'POST':
+        return redirect(url_for('thx'))
 
 
     return render_template("registration.html")
