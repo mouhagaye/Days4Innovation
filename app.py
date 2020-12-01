@@ -39,10 +39,11 @@ def registration():
     events = request.form.getlist('evenement')
     evenements = ",".join(events)
 
-    cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO participant(nom,mail,remarque,evenements) VALUES (%s, %s, %s,%s)",(name,mail,remarque,evenements))
-    mysql.connection.commit()
-    cur.close()
+    if mail is not None:
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO participant(nom,mail,remarque,evenements) VALUES (%s, %s, %s,%s)",(name,mail,remarque,evenements))
+        mysql.connection.commit()
+        cur.close()
 
 
     for event in events:
