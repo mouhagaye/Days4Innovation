@@ -1,6 +1,10 @@
-FROM python:3.6.1
+FROM python:3.7-alpine
+WORKDIR /Days4Innovation
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+RUN apk add --no-cache gcc musl-dev linux-headers
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 EXPOSE 5000
-WORKDIR /project
-ADD . /project
-RUN pip3 install -r requirements.txt
-CMD python app.py
+COPY . .
+CMD ["flask", "run"]
