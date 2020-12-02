@@ -13,4 +13,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./db/dabase.sql:/docker-entrypoint-initdb.d/database.sql
+      - ./db/dabase.sql:/docker-entrypoint-initdb.d/dabase.sql
