@@ -43,7 +43,7 @@
                 <li><a href="#Apropos">A propos</a></li>
             </ul>
         </div>
-        <a href="{{url_for('registration')}}" class="button-participate"> PARTICIPEZ...</a>
+        <a href="{{ url_for('registration')}}" class="button-participate"> PARTICIPEZ...</a>
 
         <div class="hero-img">
             <img src="static/images/macLineBreakers.png" alt="macbook illustration">
@@ -61,23 +61,60 @@
                 Venez vivre avec nous, comme jamais, l’innovation chez SONATEL.
             </p>
         </div>
-        <a href="{{url_for('registration')}}" class="big-button-participate">
+        <a href="{{ url_for('registration')}}" class="big-button-participate">
             Enregistrez vous <br> maintenant!
         </a>
 
         <div id="Speaker" class="caroussel-wrapper">
             <div class="caroussel-item">
-                <img src="static/images/cisse-Google.png" alt="cisse google">
-                <h5>Moustapha CISSE - google Africa</h5>
+                <img src="static/images/DG.jpg" alt="Sékou Dramé">
+                <h5>Sékou DRAME - Directeur Général SONATEL</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/mary-teuw-niane.jpg" alt="MT Niane">
+                <h5>Pr Mary Teuw NIANE -Membre de l'Académie nationale des Sciences et Techniques du Sénégal</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/Moustaphabamtu.jpg" alt="Moustapha DIOUF">
+                <h5>Mohamed Moustapha DIOUF - Directeur Général Baamtu</h5>
             </div>
             <div class="caroussel-item">
                 <img src="static/images/nico.png" alt="nico AMEA">
                 <h5>Nicolas Bry - Boost Orange MEA Innovation</h5>
             </div>
             <div class="caroussel-item">
-                <img src="static/images/bigs.png" alt="Birahim sonatel">
-                <h5>El Hadji Birahim GUEYE -innovation Lab SONATEL</h5>
+                <img src="static/images/Mor.jpg" alt="Mor">
+                <h5>Mor DIOUM- Head of Innovation l@b Atos</h5>
             </div>
+            <div class="caroussel-item">
+                <img src="static/images/sandene.jpg" alt="sandéné">
+                <h5>Sandéné NDAO - Head Of Technology Shared Service Orange MEA </h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/R-Solange.jpg" alt="solange">
+                <h5>Rokhaya Solange NDIR - Economie et écosystème numérique SONATEL </h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/Kalidou.png" alt="Kalidou">
+                <h5>Kalidou SY - Intragrateur & admin. de Services SONATEL</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/CTDIOP.jpg" alt="Kalidou">
+                <h5>Cheikh Tidiane DIOP - Responable Open Innovation SONATEL</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/Aissatou.jpg" alt="Aissatou">
+                <h5> Aissatou DIAGNE BA - Responsable contrôle de gestion Cluster SONATEL</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/Sire.jpg" alt="Aissatou">
+                <h5>Sire DIAGNE - Administrateur Systeme  SONATEL</h5>
+            </div>
+            <div class="caroussel-item">
+                <img src="static/images/Cheick-NDONGO.jpg" alt="Kalidou">
+                <h5>Cheikh NDONGO - Senior Architect Big Data SONATEL</h5>
+            </div>
+
         </div>
         <div id="Agenda" class="D4I-logo">
             <img src="static/images/innovation-days logo.svg" alt="">
@@ -135,16 +172,16 @@
             <ul>
                 <li>
                     <div class="title"> <span class="item-hour">14:30-15:30 </span>Intrapreneur factory</div>
-                    <div class="presentateur">Présenté  par le Nicolas Bry
+                    <div class="presentateur">Présenté par le Nicolas Bry
                         <br>Présidé par DRH- M. Ibrahima TRAORE
-                        </div>
+                    </div>
                 </li>
                 <li>
 
                     <div class="title"> <span class="item-hour">15:30-16:30 </span>Koori- Design Thinking</div>
                     <div class="presentateur">Présenté par kalidou Sy,Papa Saliou MBODJI
-                        <br>Présidé par le DSI-  Mme Racky Sada WANE
-                       </div>
+                        <br>Présidé par le DSI- Mme Racky Sada WANE
+                    </div>
                 </li>
             </ul>
         </div>
@@ -160,17 +197,19 @@
             <div class="item-theme">Innovation Panel</div>
             <ul>
                 <li>
-                    <div class="title"><span class="item-hour">09:00-10:15 </span>Open innovation en Afrique </div>
-                    <div class="presentateur">Panélistes : Rokhaya S. NDIR, Mor DIOUM Atos, Cheikh.T. DIOP, Florent YOUZAN (SG ilab)
-                        <br>Présidé par  DCIRE, M. Karim MBENGUE</div>
+                    <div class="title"><span class="item-hour">09:00 10:00 </span>Open innovation en Afrique </div>
+                    <div class="presentateur"> Modération: Rokhaya S. NDIR <br>Panélistes : Mor DIOUM Atos, Cheikh.T.
+                        DIOP, Florent YOUZAN (SG ilab)
+
                 </li>
 
                 <li>
                     <div class="title"><span class="item-hour">11:00-12:00 </span>AI and Data innovation pour telcos
                     </div>
-                    <div class="presentateur">Panélistes:  Moustapha DIOUF, Sandéné NDAO, Cheikh Ndongo, Papa Ngal DIAO
+                    <div class="presentateur"> Modération: Birahim GUEYE <br> Panélistes: Moustapha DIOUF, Sandéné NDAO,
+                        Cheikh Ndongo, Papa Ngal DIAO
                         Présidé par DSD, M. Omar G. NDIAYE
-                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -184,7 +223,7 @@
                 <li>
                     <div class="title"> <span class="item-hour">10:00-11:00 </span>Innovation et Formation
                     </div>
-                    <div class="presentateur">Panélistes:  Pr. Mary teuw Niane                    </div>
+                    <div class="presentateur">Modération: Birahim GUEYE Panélistes: Pr. Mary teuw Niane </div>
                 </li>
             </ul>
         </div>
@@ -199,7 +238,7 @@
 
                     <div class="title"><span class="item-hour"> 14:30-15:30 </span>Présentation des linebreakers
                     </div>
-                    <div class="presentateur">Sire et Aissatou</div>
+                    <div class="presentateur">Présentation: Sire DIAGNE et Aissatou Diagne BA</div>
                 </li>
                 <li>
 
@@ -214,10 +253,10 @@
         <div class="theme-logo" id="Apropos">
             <img src="static/images/innov-success.svg" alt="">
         </div>
-        
+
         <div class="footer">
-            <a href="{{url_for('registration')}}" class="button-participate">
-                <h2> Let's Go... </h2>
+            <a href="{{ url_for('registration')}}" class="button-participate">
+                <h2> Vous en êtes ... </h2>
             </a>
 
             <div class="logo">
@@ -242,7 +281,13 @@
             speed: 300,
             slidesToShow: 1,
             centerMode: true,
+            width: 375,
+            height: 100,
             variableWidth: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            slidesToShow:3,
+  slidesToScroll:2,
             prevArrow: '<div class="slide-arrow prev-arrow"><i class="fa fa-arrow-right"></i></div>',
             nextArrow: '<div class="slide-arrow next-arrow"><i class="fa fa-arrow-left"></i></div>'
         });

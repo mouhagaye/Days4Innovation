@@ -493,6 +493,11 @@ header {
   background: linear-gradient(180deg, black 0%, #008b82 48%);
 }
 
+.slick-slide img {
+  width: auto;
+  height: 375px;
+}
+
 .caroussel-item {
   padding-right: 30px;
 }
@@ -687,7 +692,7 @@ ul {
 .presentateur {
   color: #707070;
   font-family: "HelveticaNeue35";
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: light;
 }
 

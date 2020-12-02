@@ -403,11 +403,16 @@ header {
     rgba(0, 139, 130, 1) 48%
   );
 }
+.slick-slide img {
+  width: auto;
+  height: 375px;
+}
 .caroussel-item {
   padding-right: 30px;
   h5 {
     font-family: $helv35-font;
   }
+ 
 }
 .slide-arrow {
   position: absolute;
@@ -538,7 +543,7 @@ ul {
 .presentateur {
   color: $primary-colors-hover;
   font-family: $helv35-font;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: light;
 }
 
