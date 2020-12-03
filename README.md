@@ -20,10 +20,13 @@ pip install -r requirements.txt
 
 - Modifier les credentials pour accéder à MySql dans app.py en y mettant les votres
 
+## Mailing
+- Si vous utiliser le service gmail ce lien vous permet d'autoriser les applications externes de se
+connecter a votre https://www.google.com/settings/security/lesssecureapps
+- Veuillez remplacer les information dans credentials.txt par votre adresse gmail sur la premiere ligne et votre
+mot sur la seconde ligne
+
 
 ## Déploiement
-
-
-https://www.google.com/settings/security/lesssecureapps
 
 Pour mettre en production utiliser waitress (en l'installant dans l'environnement virtuel) et NGINX.2020 . (cf https://dev.to/thetrebelcc/how-to-run-a-flask-app-over-https-using-waitress-and-nginx-2020-235c)

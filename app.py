@@ -1,9 +1,24 @@
 from flask import Flask ,render_template,request,redirect,url_for
 from flask_mysqldb import MySQL
-import pythoncom
-import win32com.client
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+from ics import Calendar, Event
+from datetime import timedelta
+
+def read_creds():
+    user = passw = ""
+    with open("credentials.txt", "r") as f:
+        file = f.readlines()
+        user = file[0].strip()
+        passw = file[1].strip()
+
+    return user, passw
 
 
+email_user ,email_password = read_creds()
 
 app = Flask(__name__)
 
@@ -59,22 +74,45 @@ def registration():
         start = day+debut[i]
         duration = duree[i]
 
+        c = Calendar()
+        e = Event(location="Sonatel",duration=timedelta(0,0,0,0,duration))
+        e.name = event
+        e.begin = start
+        c.events.add(e)
+        c.events
+        # [<Event 'My cool event' begin:2014-01-01 00:00:00 end:2014-01-01 00:00:01>]
+        with open('my.ics', 'w') as my_file:
+            my_file.writelines(c)
+        # and it's done !
+
         if mail is not None:
+            email_send = mail
             try:
-                pythoncom.CoInitialize()
-                outlook = win32com.client.Dispatch("Outlook.Application")
-                appt = outlook.CreateItem(1)
-                appt.Start = start # yyyy-MM-dd hh:mm
-                appt.Subject = event
-                appt.Duration = duration # In minutes (60 Minutes)
-                appt.Location = "Sonatel"
-                appt.MeetingStatus = 1 # 1 - olMeeting; Changing the appointment to meeting. Only after changing the meeting status recipients can be added
 
-                appt.Recipients.Add(mail) # Don't end ; as delimiter
+                subject = event
 
-                appt.Send()
-        
-                pythoncom.CoInitialize()
+                msg = MIMEMultipart()
+                msg['From'] = email_user
+                msg['To'] = email_send
+                msg['Subject'] = subject
+
+                body = 'Merci de votre participation a Days4Innovation !'
+                msg.attach(MIMEText(body,'plain'))
+
+                icspart = MIMEBase('text', 'calendar', **{'method' : 'REQUEST', 'name' : 'meeting.ics'})
+                icspart.set_payload( open("my.ics","rb").read() )
+                icspart.add_header('Content-Transfer-Encoding', '8bit')
+                icspart.add_header('Content-class', 'urn:content-classes:calendarmessage')
+                msg.attach(icspart)
+
+                text = msg.as_string()
+                server = smtplib.SMTP('smtp.gmail.com',587)
+                server.starttls()
+                server.login(email_user,email_password)
+
+
+                server.sendmail(email_user,email_send,text)
+                server.quit()
 
             except:
                 print('An error occured!')
