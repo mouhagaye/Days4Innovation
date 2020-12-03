@@ -23,4 +23,7 @@ pip install -r requirements.txt
 
 ## Déploiement
 
+
+https://www.google.com/settings/security/lesssecureapps
+
 Pour mettre en production utiliser waitress (en l'installant dans l'environnement virtuel) et NGINX.2020 . (cf https://dev.to/thetrebelcc/how-to-run-a-flask-app-over-https-using-waitress-and-nginx-2020-235c)
