@@ -27,7 +27,7 @@ def registration():
     day1 = ['D4I2020', 'Oz innovation Stories', 'Orange Fab Stories', 'Intrapreneur Factory', 'koori- Design thinking']
     day2 = ['Open innovation en Afrique', 'AI and Data innovation pour telcos', 'Innovation et Formation', 'Présentation des linebreakers', 'Visite Orange Digital Center']
     debut = [' 11:00',' 10:15',' 12:00',' 14:30',' 15:30',' 09:00',' 11:00',' 10:00',' 14:30',' 15:30']
-    duree = [15,105,60,60,60,75,75,60,60,60]
+    duree = [15,105,60,60,60,60,60,60,60,60]
 
     titre = day1 + day2
 
