@@ -1,5 +1,5 @@
 from flask import Flask ,render_template,request,redirect,url_for
-from flask_mysqldb import MySQL
+import mysql.connector
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -22,12 +22,15 @@ email_user ,email_password = read_creds()
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER']= 'root'
-app.config['MYSQL_PASSWORD'] = 'leavemealone'
-app.config['MYSQL_DB'] = 'Days4Innovation'
 
-mysql = MySQL(app) 
+config = {
+        'user': 'root',
+        'password': 'root',
+        'host': 'localhost',
+        'port': '3306',
+        'database': 'Days4Innovation'
+    }
+
 
 
 @app.route("/")
@@ -56,10 +59,12 @@ def registration():
     evenements = ",".join(events)
 
     if mail is not None:
-        cur = mysql.connection.cursor()
+        connection = mysql.connector.connect(**config)
+        cur = connection.cursor(buffered = True)
         cur.execute("INSERT INTO participant(nom,mail,remarque,evenements) VALUES (%s, %s, %s,%s)",(name,mail,remarque,evenements))
-        mysql.connection.commit()
-        cur.close()
+        cur.execute("SELECT* FROM participant")
+        connection.commit()
+        connection.close()
 
 
     for event in events:
